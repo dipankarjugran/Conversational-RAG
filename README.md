@@ -68,8 +68,5 @@ Open the provided local URL in your browser to interact with the chatbot.
 
 (See `requirements.txt` for the full list.)
 
-## License
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
 ---
 Feel free to customize this README with more details about your project, usage examples, or contribution guidelines as needed.
