@@ -39,8 +39,10 @@ README.md
    ```bash
    pip install -r requirements.txt
    ```
+3. **Enter your API key**
+   When running the app, you will be prompted to enter your Google Gemini API key in the sidebar. If you do not enter it, the app will use the default placeholder. For best results, obtain your own API key and enter it when prompted.
 
-3. **Prepare the FAISS index**
+4. **Prepare the FAISS index**
    - Use `make_vector_db.ipynb` to create your FAISS index from your log or text data. This will generate the necessary `.faiss` and `.pkl` files.
    - Place the generated files in the `faiss-db/faiss_index_adb/` directory. (A placeholder file is present by default.)
 
