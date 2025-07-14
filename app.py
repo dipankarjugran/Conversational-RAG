@@ -24,7 +24,7 @@ class ContextAwareMessage(AIMessage):
 
 class LogChatbot:
     def __init__(self, api_key=None, persist_directory=None):
-        os.environ["GOOGLE_API_KEY"] = api_key or os.getenv("GOOGLE_API_KEY", "AIzaSyA8YWbFYbRj76aCKtbN47bKMd4jryGF_ak")
+        os.environ["GOOGLE_API_KEY"] = api_key or os.getenv("GOOGLE_API_KEY", "enter_your_api_key") #<--- Enter your gemini API key
         self.persist_directory = persist_directory or r"faiss-db\faiss_index_adb"
         self._init_components()
 
