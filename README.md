@@ -13,14 +13,20 @@ Conversational RAG is a Python-based chatbot application that leverages Retrieva
 ```
 faiss-db/
   faiss_index_adb/
-    index.faiss
-    index.pkl
-log_chatbot_streamlit.py
-readme.md
+    put your .faiss and .pickle files here.txt
+make_vector_db.ipynb
+app.py
+requirements.txt
+run.bat
+README.md
 ```
 - `faiss-db/`: Contains the FAISS vector database and index files
-- `log_chatbot_streamlit.py`: Main Streamlit app for the chatbot
-- `readme.md`: Project documentation
+- `faiss_index_adb/`: Place your FAISS index files here (see below)
+- `make_vector_db.ipynb`: Notebook to create your FAISS index from text data
+- `app.py`: Main Streamlit app for the chatbot
+- `requirements.txt`: Project dependencies
+- `run.bat`: Windows batch file to launch the app
+- `README.md`: Project documentation
 
 ## Setup Instructions
 1. **Clone the repository**
@@ -31,25 +37,36 @@ readme.md
 2. **Install dependencies**
    Ensure you have Python 3.8+ installed. Install required packages:
    ```bash
-   pip install streamlit faiss-cpu
+   pip install -r requirements.txt
    ```
-   (Add any other dependencies your project uses)
 
 3. **Prepare the FAISS index**
-   - Place your FAISS index files in the `faiss-db/faiss_index_adb/` directory.
+   - Use `make_vector_db.ipynb` to create your FAISS index from your log or text data. This will generate the necessary `.faiss` and `.pkl` files.
+   - Place the generated files in the `faiss-db/faiss_index_adb/` directory. (A placeholder file is present by default.)
 
 ## Usage
 Run the Streamlit app:
 ```bash
-streamlit run log_chatbot_streamlit.py
+streamlit run app.py
+```
+Or on Windows, you can use:
+```bash
+run.bat
 ```
 Open the provided local URL in your browser to interact with the chatbot.
 
 ## Requirements
 - Python 3.8+
 - streamlit
+- langchain
+- langchain-community
+- langchain-google-genai
 - faiss-cpu
-- (Add any other dependencies here)
+- sentence-transformers
+- google-generativeai
+- torch
+
+(See `requirements.txt` for the full list.)
 
 ## License
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
